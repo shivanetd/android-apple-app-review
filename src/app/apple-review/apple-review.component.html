@@ -7,9 +7,12 @@
 
 
 <div class="row">
-    <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-      </div>
+    <div class="col-md-4" *ngFor="let reviewEntry of appleReview.feed.entry">
+        <div class="border border-secondary rounded p-2">
+            <h2>{{reviewEntry.author.name.label}}</h2>
+            <p>{{reviewEntry.content.label}}</p>
+            <span class="badge badge-pill badge-primary">{{reviewEntry["im:rating"].label}} stars</span>
+            <span class="badge badge-pill badge-secondary">Version:- {{reviewEntry["im:version"].label}}</span>
+        </div>
+    </div>
 </div>

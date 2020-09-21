@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apple_api_url: "https://itunes.apple.com/rss/customerreviews/id=",
+  android_api_url: ""
 };
 
 /*
